@@ -1,0 +1,42 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.AgeCounter {
+  align-items: center;
+  border: 2px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+}
+
+.AgeCounter.young h3 {
+  color: lightgreen;
+}
+
+.AgeCounter.old h3 {
+  color: crimson;
+}
+
+.AgeCounter button {
+  margin: 5px auto;
+}
+
+.AgeTotaller {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.AgeTotaller .cats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.AgeTotaller .AgeCounter {
+  margin: 10px;
+}
