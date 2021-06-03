@@ -28,7 +28,10 @@
 .AgeTotaller {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-left: 300px;
 }
 
 .AgeTotaller .cats {
@@ -40,3 +43,9 @@
 .AgeTotaller .AgeCounter {
   margin: 10px;
 }
+
+/* align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+} */
