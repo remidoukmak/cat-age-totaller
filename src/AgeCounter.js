@@ -11,10 +11,10 @@ export const AgeCounter = ({ cat }) => {
     setCount(0);
   }
 
-  function sumOfAges() {
-    let total = 0;
-    for (let i = 0; i < input.length; i++);
-  }
+  // function sumOfAges() {
+  //   let total = 0;
+  //   for (let i = 0; i < input.length; i++);
+  // }
   // 5. Use a ternary operator to create a variable which has the value "young" when the age is less than 9 and "old" when the age is 9 or greater.
   // Use string interpolation to add this variable as a class to the AgeCounter component.
   // (i.g.if the age is 11, the AgeCounter should have "AgeCounter" and "old" as CSS classes).

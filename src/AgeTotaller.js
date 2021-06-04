@@ -3,6 +3,7 @@ import AgeCounter from "./AgeCounter";
 
 // 6. Add a text input above the AgeCounters in AgeTotaller.js and button.
 // Use this input and button to add a new cat name to the array.
+//
 // You will need to store the new cat name input in state(remember to use onChange to update it)
 // and use the button to add the input to the array of cat names.
 // Remember that you will want to use array destructuring here to create a new array.
@@ -13,22 +14,28 @@ import AgeCounter from "./AgeCounter";
 
 const AgeTotaller = () => {
   const [cats, setCats] = useState(["Garfield", "Ollie", "Tom", "Meowmeow"]);
-  const [newName, setNewName] = useState("0");
+  const [newName, setNewName] = useState("");
   const [totalAge, setTotalAge] = useState();
-  }
 
   function addNewName() {
-    const newNames = [...names, newName];
-    setCatName(newNames);
-    if (name >= 3) {
-      addNewName();
+    let newCats;
+    // let newNames = [...cats, newCats];
+    if (newName === "(.*[a-z]){3,}/i") {
+      newCats = cats.concat(newName);
     }
+    setCats(newCats);
   }
+  // /(.*[a-z]){3}/i;
 
-function addCatAge() {
-  const totalAges = [...totalAges, totalAge];
-  addCatAge(totalAges);
- }
+  // function handleAdd() {
+  //   const newList = list.concat({ name });
+  //   setList(newList);
+  // }
+
+  function addCatAge() {
+    const totalAges = [...totalAges, totalAge];
+    addCatAge(totalAges);
+  }
   return (
     <div>
       <input type="text" onChange={(event) => setNewName(event.target.value)} />
@@ -42,8 +49,10 @@ function addCatAge() {
       </div>
 
       <h1>The total age is: </h1>
-            <input type="text" onChange={(event) => setTotalAge(event.target.value)} />
-
+      <input
+        type="text"
+        onChange={(event) => setTotalAge(event.target.value)}
+      />
     </div>
   );
 };
